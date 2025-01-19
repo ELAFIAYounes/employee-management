@@ -82,48 +82,7 @@ employee-management/
 ├── Dockerfile
 ├── pom.xml
 └── README.md
-```
 
 ## API Documentation
 
 The API is fully documented using OpenAPI/Swagger. Access the documentation at http://localhost:8085/swagger-ui.html when the application is running.
-
-## Security Features
-
-- Role-based access control (HR, Managers, Administrators)
-- Department-based access restrictions
-- Spring Security integration
-- JWT-based authentication
-- Secure password storage with BCrypt
-- Comprehensive audit logging
-- IP tracking for all operations
-
-## Testing
-
-Run the tests using:
-```bash
-mvn test
-```
-
-For integration tests:
-```bash
-mvn verify
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Spring Boot team for the excellent framework
-- Oracle for database support
-- All contributors who participate in this project
