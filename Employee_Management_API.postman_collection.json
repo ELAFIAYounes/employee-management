@@ -1,0 +1,106 @@
+{
+    "info": {
+        "name": "Employee Management API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create Employee",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"employeeId\": \"EMP001\",\n    \"fullName\": \"John Doe\",\n    \"jobTitle\": \"Software Engineer\",\n    \"department\": {\n        \"id\": 1\n    },\n    \"hireDate\": \"2025-01-19\",\n    \"status\": \"ACTIVE\",\n    \"email\": \"john.doe@company.com\",\n    \"phone\": \"+1234567890\",\n    \"address\": \"123 Main St, City, Country\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/employees",
+                    "host": ["{{base_url}}"],
+                    "path": ["api", "employees"]
+                }
+            }
+        },
+        {
+            "name": "Get Employee",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "{{base_url}}/api/employees/1",
+                    "host": ["{{base_url}}"],
+                    "path": ["api", "employees", "1"]
+                }
+            }
+        },
+        {
+            "name": "Update Employee",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"employeeId\": \"EMP001\",\n    \"fullName\": \"John Doe Updated\",\n    \"jobTitle\": \"Senior Software Engineer\",\n    \"department\": {\n        \"id\": 1\n    },\n    \"hireDate\": \"2025-01-19\",\n    \"status\": \"ACTIVE\",\n    \"email\": \"john.doe@company.com\",\n    \"phone\": \"+1234567890\",\n    \"address\": \"123 Main St, City, Country\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/employees/1",
+                    "host": ["{{base_url}}"],
+                    "path": ["api", "employees", "1"]
+                }
+            }
+        },
+        {
+            "name": "Delete Employee",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "{{base_url}}/api/employees/1",
+                    "host": ["{{base_url}}"],
+                    "path": ["api", "employees", "1"]
+                }
+            }
+        },
+        {
+            "name": "Search Employees",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "{{base_url}}/api/employees/search?query=John",
+                    "host": ["{{base_url}}"],
+                    "path": ["api", "employees", "search"],
+                    "query": [
+                        {
+                            "key": "query",
+                            "value": "John"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Employees by Department",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "{{base_url}}/api/employees/department/1",
+                    "host": ["{{base_url}}"],
+                    "path": ["api", "employees", "department", "1"]
+                }
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://localhost:8085"
+        }
+    ]
+}
